@@ -1,0 +1,629 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans+Meroitic&display=swap');
+
+body {
+    font-family: "Montserrat", sans-serif;
+    background:  rgb(255, 225, 185);
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+}
+
+
+
+/* Flexbox container for logo */
+.logoContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Style for logo  */
+.landingLogoStyle {
+    display: block;
+    width: 500px;
+    height: auto;
+    opacity: 0;
+    animation: fadeIn 2s ease-in-out forwards;
+    animation-delay: .5s;
+
+}
+
+.logoContainer a {
+    display: inline-block;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.logRegButtonStyle {
+    background-color: #09506e;
+    border-radius: 5px;
+    color: white;
+    padding: 5px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    margin: 2px 1px;
+    transition: background-color 0.3s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    animation: fadeIn 1s ease-in-out forwards;
+    animation-delay: 2s;
+}
+
+.logRegButtonStyle:hover {
+    background-color: #ff4400;
+}
+
+/* -- Registration Form -- */
+
+.LogoAuthStyle {
+    position: fixed;
+    left: 50%;
+    top: 10px;
+    transform: translateX(-50%);
+    width: 250px;
+    height: auto;
+    opacity: 0;
+    animation: fadeIn 1s ease-in-out forwards;
+}
+
+.formContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 95%;
+    max-width: 1500px;
+    margin: 0 auto;
+    padding-top: 185px;
+    gap: 20px;
+}
+
+/* Individual form styling */
+.registrationFormStyle,
+.loginFormStyle {
+    flex: 1;
+    padding: 20px;
+    border-radius: 8px;
+    color: #ff4400;
+    box-sizing: border-box;
+    background: #fff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Form title */
+.registrationFormStyle h2,
+.loginFormStyle h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    text-align: center;
+    color: #09506e;
+}
+
+/* Labels and inputs */
+.registrationFormStyle label,
+.loginFormStyle label {
+    display: block;
+    margin-bottom: 5px;
+    color: #09506e;
+    font-weight: bold;
+}
+
+.registrationFormStyle input[type="text"],
+.registrationFormStyle input[type="password"],
+.registrationFormStyle input[type="number"],
+.registrationFormStyle select,
+.loginFormStyle input[type="text"],
+.loginFormStyle input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+    font-size: 16px;
+    color: #333333;
+    box-sizing: border-box;
+}
+
+/* Submit button */
+.registrationFormStyle input[type="submit"],
+.loginFormStyle input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #09506e;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.registrationFormStyle input[type="submit"]:hover,
+.loginFormStyle input[type="submit"]:hover {
+    background-color: #ff4400;
+}
+
+/* Error message styling */
+.errorStyle {
+    color: #d9534f;
+    margin-bottom: 15px;
+    font-size: 14px;
+}
+
+
+/* -- Header Styling -- */
+
+.headerContainerStyle {
+    background: linear-gradient(90deg, #002535, #054662);
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    height: 220px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    color: white;
+    box-sizing: border-box;
+    position: relative;
+}
+
+/* Logo Container Styling */
+.headerLogoContainer {
+    position: absolute;
+    top: 0;
+    right: 0px;
+    padding: 15px;
+}
+
+/* Logo Image Styling */
+.LogoHeaderStyle {
+    width: 180px;
+    height: auto;
+}
+
+/* User Info Styling */
+.userInfoStyle {
+    color: #ffdda1;
+    margin-bottom: 10px;
+}
+
+.userInfoStyle h2,
+.userInfoStyle h3 {
+    margin: 5px;
+}
+
+/* Navigation Container Styling */
+.navContainerStyle {
+    margin-top: auto;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    padding-top: 10px;
+    border-top: 1px solid #ffffff50;
+}
+
+.homeNavLinkStyle,
+.createNavLinkStyle,
+.manageNavLinkStyle,
+.knowHowNavLinkStyle {
+    background-color: #ff4400;
+    border: 1px solid rgb(0, 0, 0);
+    width: 250px;
+    padding: 10px;
+    border-radius: 5px;
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+}
+
+.homeNavLinkStyle:hover,
+.createNavLinkStyle:hover,
+.manageNavLinkStyle:hover,
+.knowHowNavLinkStyle:hover {
+    background-color: #e03500;
+}
+
+
+/* -- Dashboard Styling -- */
+
+.dashboardImageContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.dashboardImageStyle {
+    width: 90%;
+    margin-top: 60px;
+    border: solid 2px rgb(99, 99, 99);
+    border-radius: 30px;
+}
+
+
+/* Create Setup Form Styling */
+
+.setupFormStyle {
+    width: 95%;
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-top: 40px;
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    color: #333;
+    box-sizing: border-box;
+}
+
+.setupFormStyle label {
+    display: block;
+    margin-bottom: 15px;
+    color: #09506e;
+    font-weight: bold;
+}
+
+.setupFormStyle input[type="text"],
+.setupFormStyle input[type="number"],
+.setupFormStyle input[type="file"],
+.setupFormStyle select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+    font-size: 16px;
+    color: #333333;
+    box-sizing: border-box;
+}
+
+.setupFormStyle input[type="file"] {
+    padding: 5px;
+    background: #f7f7f7;
+    border: 1px solid #ddd;
+}
+
+.setupFormStyle input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    background-color: #09506e;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.setupFormStyle input[type="submit"]:hover {
+    background-color: #ff4400;
+}
+
+.errorStyle {
+    color: #d9534f;
+    margin-bottom: 15px;
+    font-size: 14px;
+}
+
+/* General Title Styling */
+
+h2.createSetupTitle,
+h3.mainComponentsTitle,
+h3.tiresTitle,
+h3.forkAdjustmentsTitle,
+h3.forkDampeningTitle,
+h4.forkSagTitle,
+h4.shockSagTitle {
+    color: #09506e;
+    margin-bottom: 20px;
+    text-align: left;
+    font-weight: 300;
+}
+
+/* Specific Adjustments */
+h2.createSetupTitle {
+    font-size: 28px;
+    margin-top: 30px;
+    text-align: center;
+}
+
+h3.mainComponentsTitle,
+h3.tiresTitle,
+h3.forkAdjustmentsTitle,
+h3.forkDampeningTitle {
+    font-size: 22px;
+    margin-top: 40px;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #ff4400;
+    padding-bottom: 5px;
+}
+
+h4.forkSagTitle,
+h4.shockSagTitle {
+    margin-top: 30px;
+    color: #ff4400;
+}
+
+/* Bike Setup navigation styling */
+.headerWithArrows {
+    display: flex;
+    align-items: center; 
+    justify-content: space-between;
+    margin: 0 auto; 
+    margin-top: 20px;
+    width: 80%; 
+    max-width: 800px; 
+    text-align: center; 
+    gap: 50px;
+}
+
+.bikeNameTitle,
+.bikeFrameTitle {
+    color: #09506e;
+    margin-bottom: 20px;
+    text-align: left;
+    font-weight: 300;
+    min-width: 300px; 
+    flex: 1; 
+    white-space: nowrap; 
+    overflow: hidden; 
+    text-overflow: ellipsis; 
+}
+
+.navArrow {
+    background-color: #09506e;
+    color: white;
+    border: solid 4px white;
+    border-radius: 50%;
+    padding: 10px;
+    margin: 0 10px;
+    font-size: 20px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease;
+    flex-shrink: 0; 
+    width: 40px; 
+    height: 40px; 
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+}
+
+.navArrow:hover {
+    background-color: #07415a;
+}
+
+
+
+/* Manage Setup Styling */
+.mainBodyContainerStyle {
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.bikeNameTitle {
+    color: #09506e;
+    margin-bottom: 20px;
+    text-align: left;
+    font-weight: 300;
+}
+
+.bikeFrameTitle {
+    color: #09506e;
+    margin-bottom: 20px;
+    text-align: left;
+    font-weight: 300;
+}
+
+
+
+.shockDataContainer,
+.tirePressureContainer,
+.forkDataContainer {
+    flex: 1;
+    margin-right: 20px;
+}
+
+.shockDataContainer h3,
+.tirePressureContainer h3,
+.forkDataContainer h3 {
+    color: #09506e;
+    margin-bottom: 10px;
+    font-size: 24px;
+    text-decoration: underline;
+}
+
+/* Grid layout for Fork and Shock data - 3 columns by 2 rows */
+.dataGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    /* 3 columns */
+    grid-template-rows: repeat(2, 1fr);
+    /* 2 rows */
+    gap: 10px;
+}
+
+/* Column layout for Tire Pressure data */
+.dataColumn {
+    display: flex;
+    gap: 10px;
+}
+
+.dataSquare {
+    width: 170px;
+    height: 100px;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffdda1;
+    color: #09506e;
+    border: solid 2px #09506e;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    font-size: 30px;
+    text-align: center;
+    padding: 15px;
+    position: relative;
+}
+
+.dataSquare p {
+    position: absolute;
+    top: 8px;
+    font-size: 14px;
+    font-weight: bold;
+    text-decoration: underline;
+    color: #555;
+    margin: 0;
+    width: 100%;
+    text-align: center;
+}
+
+.editSetupButtonStyle {
+    display: block; 
+    width: 96%; 
+    padding: 10px;
+    margin-top: 40px;
+    background-color: #09506e;
+    border: solid 2px #07415a;
+    border-radius: 4px;
+    color: white;
+    font-size: 16px;
+    text-align: center;
+    cursor: pointer;
+    text-decoration: none; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.editSetupButtonStyle:hover {
+    background-color: #07415a;
+}
+
+.deleteButtonStyle {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    background-color: #ee2121;
+    border: solid 2px #09506e;
+    border-radius: 4px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.deleteButtonStyle:hover {
+    background-color: #d40000;
+}
+
+
+/* Update Form Styling */
+.updateSetupHeaderContainer {
+    display: flex;
+    width: 500px;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    margin-top: 30px;
+    box-sizing: border-box;
+}
+
+h2.updateSetupTitle {
+    color: #09506e;
+    margin-bottom: 20px;
+    text-align: left;
+    font-weight: 300;
+    flex-grow: 1;
+}
+
+.cancelUpdateButtonStyle {
+    padding: 8px;
+    background-color: #09506e;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    flex-shrink: 0;
+}
+
+.cancelUpdateButtonStyle:hover {
+    background-color: #ff4400; 
+}
+
+/*  -- Know How Page Styling --  */
+.knowHowBodyContainer {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    color: #333;
+    box-sizing: border-box;
+    margin-top: 40px;
+}
+
+.knowHowBodyContainer h3 {
+    font-size: 28px;
+    color: #09506e;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.faqContainer {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.faqCard {
+    background-color: #ffdda1;
+    border: 2px solid #09506e;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s;
+}
+
+.faqCard:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.faqQuestion {
+    font-size: 20px;
+    color: #09506e;
+    margin-bottom: 10px;
+    text-decoration: underline;
+}
+
+.faqAnswer {
+    font-size: 16px;
+    color: #333;
+    line-height: 1.5;
+}
