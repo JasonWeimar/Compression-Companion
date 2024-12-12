@@ -12,7 +12,7 @@ import Layout from './components/Layout';
 
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/Compression-Companion">
       <Routes>
         <Route path="/" element={<LandingPageView />} />
         <Route path="/companion/auth" element={<LoginAndRegView />} />
