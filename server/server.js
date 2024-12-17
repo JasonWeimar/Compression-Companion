@@ -8,7 +8,7 @@ import SetupRouter from './routes/setup.routes.js';
 import UserRouter from './routes/user.routes.js';
 
 
-// Connect to database
+// Connect to database (Document DB)
 dbConnect();
 
 // Create instance of Express application
